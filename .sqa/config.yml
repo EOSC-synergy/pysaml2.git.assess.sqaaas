@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.9
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/IdentityPython/pysaml2:
+      branch: master
+      repo: https://github.com/IdentityPython/pysaml2.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/IdentityPython/pysaml2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-tomato-tuatara.sh
+        container: qc.acc_wiggy-thistle-fossa
+  QC.Doc:
+    repos:
+      github.com/IdentityPython/pysaml2 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-cornflower-shrimp.sh
+        container: qc.doc_sloppy-cerise-moth
+      github.com/IdentityPython/pysaml2 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-apricot-cuttlefish.sh
+        container: qc.doc_cranky-periwinkle-uguisu
+      github.com/IdentityPython/pysaml2 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-flax-ragdoll.sh
+        container: qc.doc_dorky-lime-binturong
+      github.com/IdentityPython/pysaml2 restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-beige-squirrel.sh
+        container: qc.doc_bluesy-mustard-robin
+  QC.Lic:
+    repos:
+      github.com/IdentityPython/pysaml2 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-amethyst-bulldog.sh
+        container: qc.lic_flabby-turquoise-emu
+  QC.Sec:
+    repos:
+      github.com/IdentityPython/pysaml2 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.pokey-tan-barb.sh
+        container: qc.sec_smelly-corn-schnauzer
+  QC.Sty:
+    repos:
+      github.com/IdentityPython/pysaml2 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-cinnamon-spitz.sh
+        container: qc.sty_blurry-tangerine-lion
+  QC.Ver:
+    repos:
+      github.com/IdentityPython/pysaml2 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-khaki-tarsier.sh
+        container: qc.ver_sickly-khaki-cattle
+timeout: 5400
