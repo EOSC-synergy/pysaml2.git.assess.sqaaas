@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.9
+      branch: release/1.7.11
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/IdentityPython/pysaml2:
       branch: master
@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/IdentityPython/pysaml2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-tomato-tuatara.sh
-        container: qc.acc_wiggy-thistle-fossa
+        - /usr/bin/env sh .sqa/script.homely-eggplant-dollar.sh
+        container: qc.acc_hasty-saffron-liger
   QC.Doc:
     repos:
       github.com/IdentityPython/pysaml2 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-cornflower-shrimp.sh
-        container: qc.doc_sloppy-cerise-moth
+        - /usr/bin/env sh .sqa/script.sunny-charcoal-spoonbill.sh
+        container: qc.doc_woolly-salmon-seahorse
       github.com/IdentityPython/pysaml2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-apricot-cuttlefish.sh
-        container: qc.doc_cranky-periwinkle-uguisu
+        - /usr/bin/env sh .sqa/script.clammy-burgundy-tarantula.sh
+        container: qc.doc_jumpy-purple-snail
       github.com/IdentityPython/pysaml2 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-flax-ragdoll.sh
-        container: qc.doc_dorky-lime-binturong
+        - /usr/bin/env sh .sqa/script.wiggy-heliotrope-clam.sh
+        container: qc.doc_leaky-alizarin-zebu
       github.com/IdentityPython/pysaml2 restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-beige-squirrel.sh
-        container: qc.doc_bluesy-mustard-robin
+        - /usr/bin/env sh .sqa/script.snappy-lilac-bonobo.sh
+        container: qc.doc_flabby-pear-angora
   QC.Lic:
     repos:
       github.com/IdentityPython/pysaml2 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-amethyst-bulldog.sh
-        container: qc.lic_flabby-turquoise-emu
+        - /usr/bin/env sh .sqa/script.frumpy-wisteria-coral.sh
+        container: qc.lic_shaky-black-neanderthal
   QC.Sec:
     repos:
       github.com/IdentityPython/pysaml2 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-tan-barb.sh
-        container: qc.sec_smelly-corn-schnauzer
+        - /usr/bin/env sh .sqa/script.gimpy-red-buzzard.sh
+        container: qc.sec_craggy-cerise-stingray
   QC.Sty:
     repos:
       github.com/IdentityPython/pysaml2 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-cinnamon-spitz.sh
-        container: qc.sty_blurry-tangerine-lion
+        - /usr/bin/env sh .sqa/script.pasty-tomato-tiger.sh
+        container: qc.sty_lovely-coral-beetle
   QC.Ver:
     repos:
       github.com/IdentityPython/pysaml2 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-khaki-tarsier.sh
-        container: qc.ver_sickly-khaki-cattle
+        - /usr/bin/env sh .sqa/script.whiny-coral-akbash.sh
+        container: qc.ver_snoopy-orchid-penguin
 timeout: 5400
