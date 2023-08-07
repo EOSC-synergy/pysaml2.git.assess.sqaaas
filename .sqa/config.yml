@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/IdentityPython/pysaml2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-orchid-discus.sh
-        container: qc.acc_gimpy-pumpkin-chamois
+        - /usr/bin/env sh .sqa/script.blurry-harlequin-woodpecker.sh
+        container: qc.acc_scummy-denim-baboon
   QC.Doc:
     repos:
       github.com/IdentityPython/pysaml2 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-russet-dane.sh
-        container: qc.doc_hilly-grey-peccary
+        - /usr/bin/env sh .sqa/script.craggy-teal-moth.sh
+        container: qc.doc_crabby-ecru-fish
       github.com/IdentityPython/pysaml2 git:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-sepia-rottweiler.sh
-        container: qc.doc_sickly-white-ragdoll
+        - /usr/bin/env sh .sqa/script.queasy-thistle-seahorse.sh
+        container: qc.doc_tacky-yellow-ocelot
       github.com/IdentityPython/pysaml2 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-lime-nightingale.sh
-        container: qc.doc_lumpy-turquoise-wasp
+        - /usr/bin/env sh .sqa/script.stealthy-orange-schnauzer.sh
+        container: qc.doc_scaly-firebrick-moth
       github.com/IdentityPython/pysaml2 restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-thistle-tzu.sh
-        container: qc.doc_smelly-harlequin-burmese
+        - /usr/bin/env sh .sqa/script.hasty-heliotrope-shrew.sh
+        container: qc.doc_hasty-puce-crocodile
   QC.Lic:
     repos:
       github.com/IdentityPython/pysaml2 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-ochre-stoat.sh
-        container: qc.lic_stealthy-rose-markhor
+        - /usr/bin/env sh .sqa/script.gummy-chocolate-opossum.sh
+        container: qc.lic_slaphappy-amaranth-pig
   QC.Sec:
     repos:
       github.com/IdentityPython/pysaml2 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-brass-wolverine.sh
-        container: qc.sec_whiny-periwinkle-seahorse
+        - /usr/bin/env sh .sqa/script.blurry-cream-mayfly.sh
+        container: qc.sec_stinky-tangerine-forest
   QC.Sty:
     repos:
       github.com/IdentityPython/pysaml2 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-rose-raccoon.sh
-        container: qc.sty_breezy-tan-angora
+        - /usr/bin/env sh .sqa/script.ugly-sepia-yak.sh
+        container: qc.sty_lumpy-denim-lizard
   QC.Ver:
     repos:
       github.com/IdentityPython/pysaml2 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-coral-flamingo.sh
-        container: qc.ver_ready-buff-weasel
+        - /usr/bin/env sh .sqa/script.seedy-amber-argentino.sh
+        container: qc.ver_foggy-chocolate-bordeaux
 timeout: 5400
